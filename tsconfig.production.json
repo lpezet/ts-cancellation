@@ -1,0 +1,10 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "rootDir": "src/main",                                  /* Specify the root folder within your source files. */
+    "sourceMap": true,                                /* Create source map files for emitted JavaScript files. */
+  },
+  "include": [
+    "src/main"
+  ]
+}

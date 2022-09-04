@@ -1,0 +1,47 @@
+{
+  "name": "cancellation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "clean": "rimraf ./build",
+    "build": "npm run clean && tsc",
+    "build-prod": "npm run clean && tsc --project tsconfig.production.json",
+    "start": "npm run build && node build/index.js",
+    "lint": "eslint src/ --ext .ts",
+    "format": "prettier --write \"src/**/*.+(ts|tsx|js|jsx|json|yml|yaml|css|md|vue)\""
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^29.0.0",
+    "@types/node": "^18.7.14",
+    "@typescript-eslint/eslint-plugin": "^5.36.1",
+    "@typescript-eslint/parser": "^5.36.1",
+    "eslint": "^8.23.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.1",
+    "prettier": "^2.7.1",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^28.0.8",
+    "typescript": "^4.8.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit_old": "npm run lint && npm run format",
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.+(ts|js|jsx)": [
+      "eslint --fix src/ --ext .ts",
+      "git add"
+    ],
+    "*.+(json|css|md)": [
+      "prettier --write",
+      "git add"
+    ]
+  }
+}
