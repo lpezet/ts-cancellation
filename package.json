@@ -1,8 +1,14 @@
 {
-  "name": "cancellation",
+  "name": "@lpezet/ts-cancellation",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "build/main/index.js",
+  "types": "build/main/index.d.ts",
+  "files": [
+    "LICENSE",
+    "Readme.md",
+    "build/"
+  ],
   "scripts": {
     "test": "jest",
     "clean": "rimraf ./build",
@@ -12,8 +18,8 @@
     "lint": "eslint src/ --ext .ts",
     "format": "prettier --write \"src/**/*.+(ts|tsx|js|jsx|json|yml|yaml|css|md|vue)\""
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Luke Pezet <lpezet@gmail.com>",
+  "license": "MIT",
   "devDependencies": {
     "@types/jest": "^29.0.0",
     "@types/node": "^18.7.14",
