@@ -115,7 +115,7 @@ To publish next version of `@lpezet/ts-cancellation`, run the following:
 
 ```bash
 npm version patch
-git push --tags origin master
+git push --tags origin main
 npm run build-prod
 npm publish --access public
 ```
