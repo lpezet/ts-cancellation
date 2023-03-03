@@ -1,6 +1,6 @@
 {
   "name": "@lpezet/ts-cancellation",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "main": "build/main/index.js",
   "types": "build/main/index.d.ts",
